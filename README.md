@@ -28,9 +28,5 @@ $$P_{\vec{a}}(t)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{1}{4\pi^2}F
 
 因此，我们证明了对于一个二维图像$f(x,y)$，它的正投影$P_{\vec{a}}$等于它的傅里叶变换的一维切片$F(u,\frac{x}{\cos\theta})$与狄拉克函数$\delta(t-\frac{y}{\sin\theta})$的卷积。这就是数字图像处理中的投影定理。
 $$\begin{aligned}
-\hat{P}_{\vec{a}}(u)&=\int_{-\infty}^{\infty}P_{\vec{a}}(t)e^{-2\pi iut} \,\mathrm{d}t \\
-&=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{1}{4\pi^2}F(v,ut-xu\cos\theta) \,e^{-2\pi iyu} \mathrm{d}u\mathrm{d}v \\
-&=\frac{1}{4\pi^3}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}F(v,u) \,\delta(u-\frac{x}{\cos\theta})e^{-2\pi iyu} \mathrm{d}u\mathrm{d}v \\
-&=\frac{1}{2\pi}\int_{-\infty}^{\infty} F(u,\frac{x}{\cos\theta})e^{-i2\pi u t} \,\mathrm{d}u \\
-&=\frac{1}{2\pi}F(u,\frac{x}{\cos\theta})\ast\delta(t-\frac{y}{\sin\theta})
+\hat{P}_{\vec{a}}(u)&=\int_{-\infty}^{\infty}P_{\vec{a}}(t)e^{-2\pi iut} \,\mathrm{d}t&=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{1}{4\pi^2}F(v,ut-xu\cos\theta) \,e^{-2\pi iyu} \mathrm{d}u\mathrm{d}v&=\frac{1}{4\pi^3}\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}F(v,u) \,\delta(u-\frac{x}{\cos\theta})e^{-2\pi iyu} \mathrm{d}u\mathrm{d}v&=\frac{1}{2\pi}\int_{-\infty}^{\infty} F(u,\frac{x}{\cos\theta})e^{-i2\pi u t} \,\mathrm{d}u&=\frac{1}{2\pi}F(u,\frac{x}{\cos\theta})\ast\delta(t-\frac{y}{\sin\theta})
 \end{aligned}$$
